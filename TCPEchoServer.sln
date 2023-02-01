@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPEchoServer", "TCPEchoServer\TCPEchoServer.csproj", "{68FA3806-A4AF-4BC6-9D71-0348403B313F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPEchoClient", "TCPEchoClient\TCPEchoClient.csproj", "{24482EF6-41C2-4600-BFE0-7B044873700F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68FA3806-A4AF-4BC6-9D71-0348403B313F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68FA3806-A4AF-4BC6-9D71-0348403B313F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68FA3806-A4AF-4BC6-9D71-0348403B313F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68FA3806-A4AF-4BC6-9D71-0348403B313F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24482EF6-41C2-4600-BFE0-7B044873700F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24482EF6-41C2-4600-BFE0-7B044873700F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24482EF6-41C2-4600-BFE0-7B044873700F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24482EF6-41C2-4600-BFE0-7B044873700F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94CDB017-03A6-497D-8DA9-7E91364F947B}
+	EndGlobalSection
+EndGlobal
