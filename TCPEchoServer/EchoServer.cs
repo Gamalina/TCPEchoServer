@@ -5,51 +5,33 @@ using System.Net.Sockets;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using TCPServerLibrary.TCPServer;
+using System.Security.Cryptography.X509Certificates;
 
 namespace TCPEchoServer
 {
-    public class EchoServer
+    public class EchoServer : AbstractTCPServer
     {
-        private const int PORT = 7;
-        
-        public EchoServer()
+        public EchoServer():base()
+        { 
+        }
+        public EchoServer(int PORT) : base(PORT)
+        {
+
+        }
+        public EchoServer(string configFilePath) :base(configFilePath)
         {
         }
 
-        public void Start()
+        public EchoServer(string name, int port) : base(name, port)
         {
-            TcpListener listener = new TcpListener(IPAddress.Any, PORT);
-            listener.Start();
-            Console.WriteLine("Server started");
-
-            while (true)
-            {
-                TcpClient client = listener.AcceptTcpClient();
-                Console.WriteLine("Client incoming");
-                Console.WriteLine($"remote (ip,port) = ({client.Client.RemoteEndPoint})");
-
-                Task.Run(() =>
-                {
-                    TcpClient tmpClient = client;
-                    DoOneClient(client);
-                });
-
-            }
         }
 
-        private void DoOneClient(TcpClient sock)
+        protected override void TcpServerWork(StreamReader sr, StreamWriter sw)
         {
-            using (StreamReader sr = new StreamReader(sock.GetStream()))
-            using (StreamWriter sw = new StreamWriter(sock.GetStream()))
-            {
-                sw.AutoFlush = true;
-                Console.WriteLine("Handle one client");
 
-                // simple echo
-                String? s = sr.ReadLine();
-                sw.WriteLine(s);
-            }
-
+            string? s = sr.ReadLine();
+            sw.WriteLine(s);
         }
     }
 }

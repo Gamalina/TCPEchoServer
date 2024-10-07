@@ -21,7 +21,7 @@ namespace TCPEchoClient
                 sw.WriteLine(str);
                 sw.Flush();
 
-                String? inStr = sr.ReadLine();
+                string? inStr = sr.ReadLine();
                 Console.WriteLine(inStr);
             }
 
